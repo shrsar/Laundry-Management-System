@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="laundrymgmt.LoginpageController">
+   <right>
+      <AnchorPane prefHeight="600.0" prefWidth="572.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="loginlabel" layoutX="207.0" layoutY="54.0" prefHeight="21.0" prefWidth="218.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="377.0" fitWidth="575.0" layoutY="89.0" opacity="0.34" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/rectangle-1544540_1920.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="54.0" layoutX="107.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/username.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="54.0" fitWidth="37.0" layoutX="113.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/password.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="usrnm" layoutX="177.0" layoutY="206.0" prefHeight="41.0" prefWidth="280.0" promptText="UID" style="-fx-border-width: 0 0 2px 0; -fx-border-color: blue;" />
+            <PasswordField fx:id="pswd" layoutX="178.0" layoutY="284.0" prefHeight="43.0" prefWidth="277.0" promptText="PASSWORD" style="-fx-border-width: 0 0 2px 0; -fx-border-color: blue;" />
+            <Button layoutX="331.0" layoutY="433.0" mnemonicParsing="false" onAction="#loginpagesignupbtnOnAction" prefHeight="41.0" prefWidth="109.0" styleClass="login-btn" stylesheets="@admin.css" text="SIGNUP" />
+            <Button fx:id="loginbtn" layoutX="166.0" layoutY="433.0" mnemonicParsing="false" onAction="#loginbtnOnAction" prefHeight="41.0" prefWidth="109.0" styleClass="login-btn" stylesheets="@admin.css" text="LOGIN" />
+            <Button layoutX="434.0" layoutY="522.0" mnemonicParsing="false" onAction="#forgotpswforgodbtnOnAction" prefHeight="18.0" prefWidth="127.0" styleClass="login-btn" stylesheets="@admin.css" text="Forgot password" />
+            <Label layoutX="220.0" layoutY="49.0" prefHeight="46.0" prefWidth="148.0" text="WELCOME" textFill="#004bcd">
+               <font>
+                  <Font name="Times New Roman Bold" size="27.0" />
+               </font>
+            </Label>
+            <Separator layoutX="-4.0" layoutY="1.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="10.0" style="-fx-background-color: black;" />
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <ImageView fitHeight="401.0" fitWidth="605.0" opacity="0.45" pickOnBounds="true" preserveRatio="true" rotate="90.0" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../img/istockphoto-520700958-612x612.jpg" />
+         </image>
+      </ImageView>
+   </center>
+</BorderPane>

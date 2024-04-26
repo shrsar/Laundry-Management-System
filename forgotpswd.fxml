@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="laundrymgmt.LoginpageController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="392.0" styleClass="nav" stylesheets="@admin.css">
+         <children>
+            <ImageView fitHeight="88.0" fitWidth="357.0" layoutX="-1.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/RaysLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="640.0" layoutY="29.0" prefHeight="34.0" prefWidth="27.0" text="UID">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="uid1" layoutX="534.0" layoutY="76.0" prefHeight="34.0" prefWidth="240.0" promptText="UID" style="-fx-border-width: 0 0 2px 0; -fx-border-color: #0598ff;" />
+      <Button layoutX="614.0" layoutY="511.0" mnemonicParsing="false" onAction="#forgotpswdchangebtnOnAction" prefHeight="34.0" prefWidth="80.0" styleClass="login-btn" stylesheets="@admin.css" text="CHANGE" />
+      <Label layoutX="593.0" layoutY="141.0" prefHeight="34.0" prefWidth="124.0" text="NEW PASSWORD">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="npswd" layoutX="535.0" layoutY="189.0" prefHeight="34.0" prefWidth="240.0" promptText="Password" style="-fx-border-width: 0 0 2px 0; -fx-border-color: #0598ff;" />
+      <TextField fx:id="seckey" layoutX="534.0" layoutY="306.0" prefHeight="34.0" prefWidth="240.0" promptText="Security Key" style="-fx-border-width: 0 0 2px 0; -fx-border-color: #0598ff;" />
+      <Label layoutX="603.0" layoutY="260.0" prefHeight="34.0" prefWidth="103.0" text="SECURITY KEY">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="636.0" layoutY="378.0" prefHeight="34.0" prefWidth="34.0" text="OTP">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="otpval" layoutX="534.0" layoutY="424.0" prefHeight="34.0" prefWidth="240.0" promptText="Security Key" style="-fx-border-width: 0 0 2px 0; -fx-border-color: #0598ff;" />
+      <Button layoutX="786.0" layoutY="424.0" mnemonicParsing="false" onAction="#sendotpbtnOnAction" prefHeight="34.0" prefWidth="103.0" styleClass="login-btn" stylesheets="@admin.css" text="SEND OTP" />
+   </children>
+</AnchorPane>

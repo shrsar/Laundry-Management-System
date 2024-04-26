@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="laundrymgmt.LoginpageController">
+   <children>
+      <AnchorPane fx:id="custordrpane" layoutX="312.0" prefHeight="700.0" prefWidth="888.0" visible="false">
+         <children>
+            <Label layoutX="90.0" layoutY="36.0" prefHeight="45.0" prefWidth="59.0" text="Services">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="90.0" layoutY="118.0" prefHeight="38.0" prefWidth="78.0" text="Cloth Type">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="278.0" prefHeight="31.0" prefWidth="90.0" text="Pickup Date">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="95.0" layoutY="381.0" prefHeight="21.0" prefWidth="49.0" text="Image">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="svs_type" layoutX="252.0" layoutY="40.0" prefHeight="38.0" prefWidth="218.0" />
+            <ComboBox fx:id="clth_type" layoutX="252.0" layoutY="118.0" prefHeight="38.0" prefWidth="218.0" />
+            <DatePicker fx:id="custpkdate" layoutX="250.0" layoutY="274.0" prefHeight="38.0" prefWidth="218.0" />
+            <AnchorPane layoutX="258.0" layoutY="366.0" prefHeight="141.0" prefWidth="175.0" style="-fx-border-color: #000000;">
+               <children>
+                  <ImageView fx:id="custordrimg" fitHeight="141.0" fitWidth="175.0" layoutX="4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="220.0" layoutY="604.0" mnemonicParsing="false" onAction="#custordrbtnOnAction" prefHeight="31.0" prefWidth="100.0" styleClass="login-btn" stylesheets="@admin.css" text="ORDER" />
+            <Separator layoutX="533.0" layoutY="4.0" orientation="VERTICAL" prefHeight="693.0" prefWidth="5.0" />
+            <Button layoutX="70.0" layoutY="421.0" mnemonicParsing="false" onAction="#custimprbtnOnAction" prefHeight="31.0" prefWidth="100.0" styleClass="login-btn" stylesheets="@admin.css" text="IMPORT" />
+            <Label layoutX="697.0" layoutY="279.0" prefHeight="21.0" prefWidth="35.0" text="BILL">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="custbill" layoutX="670.0" layoutY="326.0" prefHeight="23.0" prefWidth="90.0" style="-fx-border-width: 0 0 2px 0; -fx-border-color: #0598ff;" textAlignment="CENTER" />
+            <Button fx:id="custrefbtn" layoutX="332.0" layoutY="604.0" mnemonicParsing="false" onAction="#refbtnOnAction" prefHeight="31.0" prefWidth="100.0" styleClass="login-btn" stylesheets="@admin.css" text="REFRESH" />
+            <Label layoutX="79.0" layoutY="542.0" prefHeight="45.0" prefWidth="100.0" text="Enter the OTP">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cstid" layoutX="227.0" layoutY="549.0" prefHeight="31.0" prefWidth="187.0" />
+            <TextField fx:id="ordrqty" layoutX="250.0" layoutY="197.0" prefHeight="38.0" prefWidth="218.0" />
+            <Label layoutX="90.0" layoutY="201.0" prefHeight="31.0" prefWidth="78.0" text="Quantity">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="430.0" layoutY="549.0" mnemonicParsing="false" onAction="#sendotpbtnOnAction1" prefHeight="31.0" prefWidth="92.0" styleClass="login-btn" stylesheets="@admin.css" text="SEND OTP" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="custrackpane" layoutX="312.0" prefHeight="700.0" prefWidth="888.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <TableView fx:id="track_table" prefHeight="389.0" prefWidth="888.0" stylesheets="@admin.css">
+              <columns>
+                <TableColumn fx:id="track_oid" minWidth="121.0" prefWidth="148.0" text="OID" />
+                <TableColumn fx:id="track_ctype" minWidth="115.0" prefWidth="148.0" text="Cloth Type" />
+                  <TableColumn fx:id="track_stype" minWidth="134.0" prefWidth="148.0" text="Service" />
+                  <TableColumn fx:id="track_odate" minWidth="60.0" prefWidth="148.0" text="Order Date" />
+                  <TableColumn fx:id="track_ddate" minWidth="100.0" prefWidth="148.0" text="Pickup Date" />
+                  <TableColumn fx:id="track_bill" prefWidth="148.0" text="Bill" />
+              </columns>
+            </TableView>
+            <Label layoutX="75.0" layoutY="434.0" text="OID">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="imgoid" layoutX="144.0" layoutY="429.0" />
+            <Button layoutX="379.0" layoutY="429.0" mnemonicParsing="false" onAction="#showimgbtnOnAction" prefHeight="31.0" prefWidth="113.0" styleClass="login-btn" stylesheets="@admin.css" text="SHOW IMAGE" />
+            <Button fx:id="trackrcvbtn" layoutX="507.0" layoutY="429.0" mnemonicParsing="false" onAction="#trackrcvbtnOnAction" prefHeight="31.0" prefWidth="92.0" styleClass="login-btn" stylesheets="@admin.css" text="RECEIVED" />
+            <Button fx:id="trackrefbtn" layoutX="372.0" layoutY="637.0" mnemonicParsing="false" onAction="#refbtnOnAction" prefHeight="31.0" prefWidth="87.0" styleClass="login-btn" stylesheets="@admin.css" text="REFRESH" />
+            <AnchorPane layoutX="647.0" layoutY="423.0" prefHeight="141.0" prefWidth="175.0" style="-fx-border-radius: 2px; -fx-border-color: black;">
+               <children>
+                  <ImageView fx:id="trackimg" fitHeight="141.0" fitWidth="175.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label fx:id="initxt" layoutX="617.0" layoutY="303.0" prefHeight="27.0" prefWidth="287.0" text="CLICK ON ANY OF THE BUTTONS" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="custseesrvpane" layoutX="312.0" prefHeight="700.0" prefWidth="888.0" visible="false">
+         <children>
+            <TableView fx:id="srvcs_table" prefHeight="700.0" prefWidth="888.0" stylesheets="@admin.css">
+              <columns>
+                <TableColumn fx:id="srvt_sid" prefWidth="177.6" text="Service ID" />
+                <TableColumn fx:id="srvt_ctype" prefWidth="177.6" text="Cloth Type" />
+                  <TableColumn fx:id="srvt_srv" prefWidth="177.6" text="Services" />
+                  <TableColumn fx:id="srvt_pce" prefWidth="177.6" text="Price@cloth" />
+                  <TableColumn fx:id="srvt_prm" prefWidth="177.6" text="Premium@Day" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="custflecmpane" layoutX="312.0" prefHeight="700.0" prefWidth="888.0" visible="false">
+         <children>
+            <TextArea fx:id="descrpt" layoutX="124.0" layoutY="75.0" prefHeight="333.0" prefWidth="435.0" />
+            <Label layoutX="257.0" layoutY="40.0" prefHeight="27.0" prefWidth="181.0" text="Write your complaint">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="627.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;">
+               <children>
+                  <ImageView fx:id="custcmpimg" fitHeight="200.0" fitWidth="200.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="custimprcmpbtn" layoutX="666.0" layoutY="297.0" mnemonicParsing="false" onAction="#custimprcmpbtnOnAction" prefHeight="45.0" prefWidth="144.0" styleClass="login-btn" stylesheets="@admin.css" text="IMPORT" />
+            <Button layoutX="372.0" layoutY="623.0" mnemonicParsing="false" onAction="#custcmpbtnOnAction" prefHeight="45.0" prefWidth="144.0" styleClass="login-btn" stylesheets="@admin.css" text="LODGE" />
+         </children></AnchorPane>
+      <ImageView fitHeight="545.0" fitWidth="729.0" layoutX="-272.0" layoutY="156.0" opacity="0.45" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../img/1339301.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="custordrbtn" layoutX="60.0" layoutY="113.0" mnemonicParsing="false" onAction="#switchpane" prefHeight="45.0" prefWidth="166.0" style="-fx-border-color: black; -fx-border-width: 2px;" styleClass="nav-btn" stylesheets="@admin.css" text="ORDER" />
+      <Button fx:id="custrackbtn" layoutX="60.0" layoutY="355.0" mnemonicParsing="false" onAction="#switchpane" prefHeight="45.0" prefWidth="166.0" style="-fx-border-color: black; -fx-border-width: 2px;" styleClass="nav-btn" stylesheets="@admin.css" text="ORDER HISTORY" />
+      <Button fx:id="exitbtn" layoutY="662.0" mnemonicParsing="false" onAction="#exitbtnOnAction" prefHeight="45.0" prefWidth="144.0" style="-fx-border-color: black; -fx-border-width: 2px;" styleClass="nav-btn" stylesheets="@admin.css" text="LOGOUT" />
+      <Label layoutX="83.0" layoutY="37.0" text="Customer">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="custseesrvbtn" layoutX="61.0" layoutY="230.0" mnemonicParsing="false" onAction="#switchpane" prefHeight="45.0" prefWidth="166.0" style="-fx-border-color: black; -fx-border-width: 2px;" styleClass="nav-btn" stylesheets="@admin.css" text="SERVICES" />
+      <Button fx:id="custflecmpbtn" layoutX="60.0" layoutY="481.0" mnemonicParsing="false" onAction="#switchpane" prefHeight="45.0" prefWidth="166.0" style="-fx-border-color: black; -fx-border-width: 2px;" styleClass="nav-btn" stylesheets="@admin.css" text="FILE COMPLAINT" />
+      <Label fx:id="welcid" layoutX="109.0" layoutY="65.0" prefHeight="25.0" prefWidth="59.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="welcimgpane" layoutX="331.0" prefHeight="700.0" prefWidth="851.0">
+         <children>
+            <ImageView fitHeight="633.0" fitWidth="641.0" layoutX="109.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/pngtree-colorful-welcome-poster-with-brush-stroke-png-image_4006158-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
