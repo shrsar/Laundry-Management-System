@@ -429,8 +429,8 @@ public class LoginpageController implements Initializable {
                 String myURI = "https://api.bulksms.com/v1/messages";
 
                 // change these values to match your own account
-                String myUsername = "lucifer1818";
-                String myPassword = "Lucifer@1818";
+                String myUsername = "sskr";
+                String myPassword = "1234";
 
                 Random random=new Random();
                 int min=100000;
@@ -499,8 +499,8 @@ public class LoginpageController implements Initializable {
                 String myURI = "https://api.bulksms.com/v1/messages";
 
                 // change these values to match your own account
-                String myUsername = "lucifer1818";
-                String myPassword = "Lucifer@1818";
+                String myUsername = "sskr";
+                String myPassword = "1234";
 
                 Random random=new Random();
                 int min=100000;
