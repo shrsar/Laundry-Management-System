@@ -5,3 +5,4 @@ This is a laundry management system project.
 4. Admin can look at the number of customers added daily, profits made and graphs related to those in his dashboard. He can look at the users signed up, update services available and look at the user complaints.
 5. Forgot password invloves OTP verification.
 6. It has password restrictions- Min 6 characters, 1 uppercase, 1 lowercase, 1 special and 1 number. 2 accounts can't have the same phone number and sign up process won't complete if same phone number or weak password is used.
+7. BulkSMS API used for OTP facility.
